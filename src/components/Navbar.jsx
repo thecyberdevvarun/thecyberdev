@@ -1,5 +1,7 @@
 "use client";
 
+import { useDispatch, useSelector } from "react-redux";
+import { selectDarkMode, toggleDarkMode } from "../redux/slices/themeSlice";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Moon, Sun, Shield } from "lucide-react";
@@ -12,7 +14,9 @@ const navLinks = [
   { href: "#leaderboard", label: "Leaderboard" },
 ];
 
-export default function Navbar({ darkMode, toggleDarkMode }) {
+export default function Navbar() {
+  const darkMode = useSelector(selectDarkMode);
+  const dispatch = useDispatch();
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
@@ -35,9 +39,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
                 darkMode ? "text-white" : "text-neutral-900"
               }`}
             >
-              the
-              <span className="text-indigo-500">cyber</span>
-              dev
+              the<span className="text-indigo-500">cyber</span>dev
             </span>
           </Link>
 
@@ -62,7 +64,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
           <div className="flex items-center gap-3">
             {/* Dark Mode Toggle */}
             <button
-              onClick={toggleDarkMode}
+              onClick={() => dispatch(toggleDarkMode())}
               className={`p-2 rounded-lg transition-colors duration-200 cursor-pointer ${
                 darkMode
                   ? "text-neutral-400 hover:text-white hover:bg-neutral-800"
@@ -123,8 +125,6 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
                     {link.label}
                   </a>
                 ))}
-
-                {/* CTA — Mobile */}
                 <Link
                   href="/signup"
                   onClick={() => setMobileOpen(false)}
