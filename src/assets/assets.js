@@ -4,11 +4,6 @@ import {
   Code2,
   Trophy,
   Flame,
-  Lock,
-  Terminal,
-  BookOpen,
-  Cpu,
-  Globe,
   Github,
   Twitter,
   Linkedin,
@@ -53,45 +48,6 @@ export const mainFeatures = [
     color: "yellow",
     stats: "Global Ranks",
     tags: ["Weekly", "Friends", "Teams", "Prizes"],
-  },
-];
-
-export const additionalFeatures = [
-  {
-    icon: Terminal,
-    title: "Monaco Editor",
-    desc: "VS Code-like coding experience with syntax highlighting and IntelliSense.",
-    color: "indigo",
-  },
-  {
-    icon: Zap,
-    title: "Instant Feedback",
-    desc: "Run security tests in seconds. Know exactly why your code is vulnerable.",
-    color: "yellow",
-  },
-  {
-    icon: Lock,
-    title: "Sandboxed Testing",
-    desc: "Safe, isolated environments. Test exploits without real-world consequences.",
-    color: "emerald",
-  },
-  {
-    icon: BookOpen,
-    title: "Learning Tracks",
-    desc: "Structured paths from beginner to expert. Web, API, Crypto, and more.",
-    color: "purple",
-  },
-  {
-    icon: Cpu,
-    title: "AI Hints (Coming)",
-    desc: "Stuck? Get AI-powered explanations of why code is vulnerable.",
-    color: "pink",
-  },
-  {
-    icon: Globe,
-    title: "Multi-Language",
-    desc: "JavaScript, Python, PHP, Go, Java. Code in your favorite language.",
-    color: "cyan",
   },
 ];
 

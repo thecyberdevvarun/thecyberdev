@@ -1,7 +1,7 @@
 "use client";
 
 import { useSelector } from "react-redux";
-import { selectDarkMode } from "../redux/slices/themeSlice";
+import { selectDarkMode } from "../../redux/slices/themeSlice";
 import { motion } from "framer-motion";
 import {
   Code2,
@@ -20,7 +20,7 @@ import {
   TrendingUp,
   ChevronRight,
 } from "lucide-react";
-import { FeaturePill } from "./ui/FeaturePill";
+import { FeaturePill } from "../ui/FeaturePill";
 
 export default function Hero() {
   const darkMode = useSelector(selectDarkMode);
@@ -43,7 +43,7 @@ export default function Hero() {
             darkMode ? "bg-emerald-500/10" : "bg-emerald-500/20"
           }`}
         />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-linear-to-r from-indigo-500/5 to-emerald-500/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 bg-linear-to-r from-indigo-500/5 to-emerald-500/5 rounded-full blur-3xl" />
 
         {/* Grid Pattern */}
         <div
