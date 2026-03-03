@@ -12,8 +12,6 @@ import {
   EyeOff,
   User,
   ArrowRight,
-  Github,
-  Chrome,
   Shield,
   Loader2,
   Sparkles,
@@ -24,12 +22,11 @@ import {
 import {
   AuthLayout,
   InputField,
-  SocialButton,
   validateField,
   getPasswordStrength,
   strengthLabels,
   strengthColors,
-} from "../../../components/Auth";
+} from "../../../components/Auth/Auth";
 
 export default function Signup() {
   const darkMode = useSelector(selectDarkMode);

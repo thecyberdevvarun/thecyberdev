@@ -1,7 +1,7 @@
 "use client";
 
 import { useSelector } from "react-redux";
-import { selectDarkMode } from "../redux/slices/themeSlice";
+import { selectDarkMode } from "../../redux/slices/themeSlice";
 import { motion } from "framer-motion";
 import { Shield, CheckCircle, AlertCircle } from "lucide-react";
 import Link from "next/link";
@@ -261,28 +261,6 @@ export function InputField({
         </motion.div>
       )}
     </div>
-  );
-}
-
-// ─────────────────────────────────────────
-// SocialButton
-// ─────────────────────────────────────────
-export function SocialButton({ icon, label, darkMode, onClick }) {
-  return (
-    <motion.button
-      type="button"
-      onClick={onClick}
-      whileHover={{ scale: 1.01, y: -1 }}
-      whileTap={{ scale: 0.99 }}
-      className={`w-full flex items-center justify-center gap-3 px-4 py-3 rounded-xl border text-sm font-medium transition-all cursor-pointer ${
-        darkMode
-          ? "bg-neutral-800 border-neutral-700 text-neutral-300 hover:bg-neutral-700 hover:text-white hover:border-neutral-600"
-          : "bg-white border-neutral-200 text-neutral-700 hover:bg-neutral-50 hover:border-neutral-300"
-      }`}
-    >
-      {icon}
-      <span>{label}</span>
-    </motion.button>
   );
 }
 

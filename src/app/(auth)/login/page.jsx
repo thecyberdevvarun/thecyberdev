@@ -11,8 +11,6 @@ import {
   Eye,
   EyeOff,
   ArrowRight,
-  Github,
-  Chrome,
   Shield,
   CheckCircle,
   Loader2,
@@ -23,9 +21,8 @@ import {
 import {
   AuthLayout,
   InputField,
-  SocialButton,
   validateField,
-} from "../../../components/Auth";
+} from "../../../components/Auth/Auth";
 
 export default function Login() {
   const darkMode = useSelector(selectDarkMode);
@@ -161,42 +158,6 @@ export default function Login() {
                 Sign in to continue your security journey
               </p>
             </motion.div>
-          </div>
-
-          {/* Social Login */}
-          <div className="space-y-3 mb-6">
-            <SocialButton
-              icon={<Chrome className="w-5 h-5" />}
-              label="Continue with Google"
-              darkMode={darkMode}
-            />
-            <SocialButton
-              icon={<Github className="w-5 h-5" />}
-              label="Continue with GitHub"
-              darkMode={darkMode}
-            />
-          </div>
-
-          {/* Divider */}
-          <div className="relative mb-6">
-            <div
-              className={`absolute inset-0 flex items-center ${
-                darkMode ? "text-neutral-700" : "text-neutral-300"
-              }`}
-            >
-              <div className="w-full border-t border-current" />
-            </div>
-            <div className="relative flex justify-center text-sm">
-              <span
-                className={`px-4 ${
-                  darkMode
-                    ? "bg-neutral-900 text-neutral-400"
-                    : "bg-white text-neutral-500"
-                }`}
-              >
-                or continue with email
-              </span>
-            </div>
           </div>
 
           {/* Form */}
