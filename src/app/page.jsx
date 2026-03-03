@@ -5,6 +5,7 @@ import Hero from "../components/section/Hero";
 import Features from "../components/section/Features";
 import HowItWorks from "../components/section/HowItWorks";
 import ChallengePreview from "../components/section/ChallengePreview";
+import Leaderboard from "../components/section/Leaderboard";
 import Footer from "../components/Footer";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
         <Features />
         <HowItWorks />
         <ChallengePreview />
+        <Leaderboard />
       </div>
       <Footer />
     </main>

@@ -57,7 +57,7 @@ export default function ChallengePreview() {
   return (
     <section
       id="challenges"
-      className={`py-24 px-4 relative overflow-hidden transition-colors duration-500 ${
+      className={`px-4 relative overflow-hidden transition-colors duration-500 ${
         darkMode ? "bg-neutral-950 text-white" : "bg-white text-neutral-900"
       }`}
     >
@@ -846,7 +846,7 @@ export default function ChallengePreview() {
               </span>
             </div>
 
-            <div className="p-4 font-mono text-sm space-y-2 min-h-[200px]">
+            <div className="p-4 font-mono text-sm space-y-2 min-h-50">
               <div className="text-neutral-500">$ npm run test:security</div>
               <div className="text-cyan-400 mt-2">
                 ▶ Running OWASP ZAP scan on challenge...
