@@ -1,16 +1,19 @@
 "use client";
 
-import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { selectDarkMode, toggleDarkMode } from "../redux/slices/themeSlice";
 import Navbar from "../components/Navbar";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(true);
-
-  const toggleDarkMode = () => setDarkMode((prev) => !prev);
+  const darkMode = useSelector(selectDarkMode);
+  const dispatch = useDispatch();
 
   return (
-    <main className={darkMode ? "dark" : ""}>
-      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+    <main>
+      <Navbar
+        darkMode={darkMode}
+        toggleDarkMode={() => dispatch(toggleDarkMode())}
+      />
     </main>
   );
 }
