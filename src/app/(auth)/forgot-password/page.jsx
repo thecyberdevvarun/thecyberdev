@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { selectDarkMode } from "../../../redux/slices/themeSlice";
+import { selectDarkMode } from "../../../redux/features/theme/themeSlice.js";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
 import Link from "next/link";

@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSelector } from "react-redux";
-import { selectDarkMode } from "../../../redux/slices/themeSlice";
+import { selectDarkMode } from "../../../redux/features/theme/themeSlice.js";
 import Link from "next/link";
 import {
   Search,

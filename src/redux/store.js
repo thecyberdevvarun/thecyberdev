@@ -2,7 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage"; // localStorage
 import { combineReducers } from "@reduxjs/toolkit";
-import themeReducer from "./slices/themeSlice";
+import themeReducer from "./features/theme/themeSlice.js";
 
 const persistConfig = {
   key: "thecyberdev",

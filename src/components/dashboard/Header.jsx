@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useSelector, useDispatch } from "react-redux";
-import { selectDarkMode, toggleDarkMode } from "../../redux/slices/themeSlice";
+import { selectDarkMode, toggleDarkMode } from "../../redux/features/theme/themeSlice.js";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Menu,

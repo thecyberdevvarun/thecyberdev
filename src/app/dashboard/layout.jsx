@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { useSelector } from "react-redux";
-import { selectDarkMode } from "../../redux/slices/themeSlice";
+import { selectDarkMode } from "../../redux/features/theme/themeSlice.js";
 import { motion, AnimatePresence } from "framer-motion";
 import Header from "../../components/dashboard/Header";
 import Sidebar from "../../components/dashboard/Sidebar";

@@ -1,7 +1,7 @@
 "use client";
 
 import { useSelector } from "react-redux";
-import { selectDarkMode } from "../../redux/slices/themeSlice";
+import { selectDarkMode } from "../../redux/features/theme/themeSlice.js";
 
 export default function DashboardPage() {
   const darkMode = useSelector(selectDarkMode);
